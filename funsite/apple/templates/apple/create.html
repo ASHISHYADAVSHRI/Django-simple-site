@@ -1,0 +1,16 @@
+{% extends "apple/base.html" %}
+
+{% block title %}Create your list {% endblock %}
+
+{% block content %} 
+Create list
+<form method = "post", action = "/create/" class="form-group">
+	{% csrf_token %}
+	<div class = "input-group mb-3">
+		<div class = "input-group-prepend">
+			<button type = "submit" name = "save" class = "btn btn-dark">Crete your page</button>
+		</div>
+		{{ form.name }}
+	</div>
+</form>
+ {% endblock %}

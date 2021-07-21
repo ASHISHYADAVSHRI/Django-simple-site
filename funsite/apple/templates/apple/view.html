@@ -1,0 +1,10 @@
+{% extends "apple/base.html" %}
+{% block tittle %}
+View
+{% endblock %}
+{% block content %}
+	{% for lt in user.ToDo.all %}
+		<p><a href = "/{{lt.id}}">{{lt.name}}</a></p>
+
+	{% endfor %}
+{% endblock %}

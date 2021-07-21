@@ -1,0 +1,16 @@
+{% extends "apple/base.html" %}
+
+{% block tittle %}
+Login here
+{% endblock %}
+
+{% load crispy_forms_tags %}
+
+{% block content %}
+	<form method = "post", class="form-group">
+		{% csrf_token %}
+		{{form|crispy}}
+		<button type = 'submit', class = "btn btn-primary"> Login </button>
+		<p> If you are visiting first time on this site ! Create an account <a href ="/register">here!</a></p>
+	</form>
+{% endblock %}
